@@ -84,7 +84,7 @@ function renderBoard(){
 status = 0;
 function eventHold(event){
   game.mark($(event.target).data('row'),$(event.target).data('col'));
-  console.log("mouse hold");
+  //console.log("mouse hold");
   renderBoard();
   }
 
