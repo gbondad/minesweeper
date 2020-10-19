@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Minesweeper</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="//code.jquery.com/mobile/1.5.0-alpha.1/jquery.mobile-1.5.0-alpha.1.min.css">
+    <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="//code.jquery.com/mobile/1.5.0-alpha.1/jquery.mobile-1.5.0-alpha.1.min.js"></script>
+  
+  <body>
+    <div id ="title"><h1>Minesweeper</h1></div>
+    <div class ="menu">
+      <div class ="menuButton" id ="easy">Easy</div>
+      <div class ="menuButton" id ="normal">Normal</div>
+      <div class ="menuButton" id ="hard">Hard</div>
+    </div>
+    <div class="gridwrapper">
+      <div class="grid"></div>
+    </div>
+    <div class="status">
+      Flags: <span class="flags">0</span>
+      Timer: <span id="Timer">0</span>
+    </div>
+    <div id="overlay">
+      <div id="overlayin">
+        <p class="big glow" id ="endmessage"></p>
+        <p class="darker">Click anywhere to restart.</p>
+      </div>
+    </div>
+  
+  
+  
+    
+  </body>
+  <script src="main.js"></script>
+</html>

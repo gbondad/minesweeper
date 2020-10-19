@@ -1,0 +1,224 @@
+* {
+  font-family: 'Raleway', sans-serif;
+  font-size: 1.3rem;
+}
+
+body {
+  background: white;
+}
+
+.card {
+  padding: 18% 18%;
+  background-color: #E0E0E0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-origin: content-box;
+
+  width: auto;
+  height: auto;
+
+
+  border: solid 1px white;
+
+
+}
+#title{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.card.hidden {
+  background-color: #8bd3f0;
+}
+
+.card.hidden:hover{
+  background-color: #7DBDD8;
+}
+
+.card.flagged{
+  background-image: url(imgs/red-flag.svg);
+  background-color: #8bd3f0;
+}
+.card.flagged:hover{
+  background-color: #7DBDD8;
+}
+
+
+
+
+.card.mine {
+  background-image: url(imgs/bomb.svg);
+  
+}
+
+.card.zero {
+  background-color:#E0E0E0;
+}
+.card.one {
+  background-image: url(imgs/numeric-1.svg);
+  background-size: 100%;
+}
+.card.two {
+  background-image: url(imgs/numeric-2.svg);
+}
+.card.three {
+  background-image: url(imgs/numeric-3.svg);
+}
+.card.four {
+  background-image: url(imgs/numeric-4.svg);
+}
+.card.five {
+  background-image: url(imgs/numeric-5.svg);
+}
+.card.six {
+  background-image: url(imgs/numeric-6.svg);
+}
+.card.seven{
+  background-image: url(imgs/numeric-7.svg);
+}
+.card.eight{
+  background-image: url(imgs/numeric-8.svg);
+}
+
+
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  border-radius: 10px;
+  padding:5px;
+  width: calc(100vh);
+  max-width: 800px;
+}
+
+.grid > div::before {
+  content: "";
+  padding-bottom: 100%;
+  display: block;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  height: 100vh;
+  width: 100vw;
+  margin: 0px;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.5em;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.menuButton {
+  padding: 5px 0.5em ;
+  border: 0px solid gray;
+  background-color: rgba(128, 128, 128, 0.233);
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 0.5em;
+  font-size:1em;
+}
+
+.menuButton:hover {
+  color: white;
+  background: black;
+}
+
+.gridwrapper {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+}
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 999;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: 0s;
+  transition: all 0s;
+
+  visibility: hidden;
+  animation: fadeOut 0.5s;
+  animation-fill-mode: forwards;
+}
+#overlay * {
+  pointer-events: none;
+}
+
+#overlay.active {
+  visibility: visible;
+  animation: fadeIn 0.5s;
+  animation-fill-mode: forwards;
+}
+
+#overlayin {
+  padding: 1em;
+  padding-left: 4em;
+  padding-right: 4em;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: rgb(255, 255, 255);
+  box-shadow: 0 0 20px black;
+}
+
+#overlayin p {
+  text-align: center;
+  font-size: 1em;
+}
+
+p.big {
+  font-size: 2em !important;
+}
+
+
+
+
+#overlay.active #overlayin {
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+#overlayin * {
+  margin: 0px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+
+
+
+
+.status {
+  margin-top: 5px;
+  text-align: center;
+  color: black;
+}
