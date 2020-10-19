@@ -1,5 +1,5 @@
 * {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: 1.3rem;
 }
 
@@ -22,13 +22,7 @@ body {
 
 
 }
-#title{
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
-}
 .card.hidden {
   background-color: #8bd3f0;
 }
@@ -82,15 +76,20 @@ body {
   background-image: url(imgs/numeric-8.svg);
 }
 
-
+@media (orientation : landscape) { 
+  .grid {
+    max-width: 800px;
+  }
+}
 
 .grid {
   display: grid;
   grid-template-columns: repeat(9, 1fr);
   border-radius: 10px;
   padding:5px;
-  width: calc(100vh);
-  max-width: 800px;
+  width: calc(100vw);
+  
+
 }
 
 .grid > div::before {
